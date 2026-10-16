@@ -1,0 +1,7 @@
+# Cloudflare Pages: rutas de la SPA (equivalente a los redirects de netlify.toml).
+# Se listan una a una para que cualquier otra ruta devuelva public/404.html con estado 404.
+/politica-de-datos /index.html 200
+/aviso-de-privacidad /index.html 200
+/terminos-y-condiciones /index.html 200
+/honorarios-y-gastos /index.html 200
+/prestador-del-servicio /index.html 200
