@@ -1,5 +1,5 @@
-import { FileCheck2, Lock } from 'lucide-react'
-import { REQUIREMENTS } from '../content/home'
+import { FileCheck2, FileSignature, Lock } from 'lucide-react'
+import { POWER_AND_AGREEMENT, REQUIREMENTS } from '../content/home'
 import WhatsAppLink from './WhatsAppLink'
 
 export default function Requirements() {
@@ -23,22 +23,33 @@ export default function Requirements() {
           </WhatsAppLink>
         </div>
 
-        <ol className="grid gap-3">
-          {REQUIREMENTS.items.map((item, i) => (
-            <li key={item.title} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5">
-              <span aria-hidden="true" className="grid size-10 shrink-0 place-items-center rounded-xl bg-emerald-50 text-brand-dark">
-                <FileCheck2 className="size-5" />
-              </span>
-              <div>
-                <h3 className="font-bold text-navy">
-                  <span className="sr-only">Documento {i + 1}: </span>
-                  {item.title}
-                </h3>
-                <p className="mt-1 text-[15px] leading-relaxed text-slate-600">{item.detail}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <div className="grid gap-3">
+          <ol className="grid gap-3">
+            {REQUIREMENTS.items.map((item, i) => (
+              <li key={item.title} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5">
+                <span aria-hidden="true" className="grid size-10 shrink-0 place-items-center rounded-xl bg-emerald-50 text-brand-dark">
+                  <FileCheck2 className="size-5" />
+                </span>
+                <div>
+                  <h3 className="font-bold text-navy">
+                    <span className="sr-only">Documento {i + 1}: </span>
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-[15px] leading-relaxed text-slate-600">{item.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <div className="rounded-2xl border border-brand/40 bg-emerald-50/60 p-5 sm:p-6">
+            <div className="flex items-center gap-3">
+              <FileSignature className="size-5 shrink-0 text-brand-dark" aria-hidden="true" />
+              <h3 className="font-bold text-navy">{POWER_AND_AGREEMENT.title}</h3>
+            </div>
+            <div className="mt-3 space-y-3 text-[15px] leading-relaxed text-slate-700">
+              {POWER_AND_AGREEMENT.paragraphs.map((p) => <p key={p}>{p}</p>)}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

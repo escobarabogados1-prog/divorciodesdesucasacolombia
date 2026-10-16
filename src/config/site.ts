@@ -17,6 +17,8 @@ export const SITE = {
     baseUrl: 'https://wa.me/573167824217',
   },
   email: 'elithlex@gmail.com',
+  tagline: 'Firma de Abogados · B2B SaaS · Legal Tech',
+  city: 'Bogotá, Colombia',
   coverage: 'Trámites gestionados ante notarías de Bogotá, con atención a consultas desde otras ciudades de Colombia y desde el exterior.',
 } as const
 
@@ -54,3 +56,23 @@ export const LEGAL_LINKS = [
 
 export const GENERAL_WHATSAPP_MESSAGE =
   'Hola, deseo información sobre un trámite de divorcio. Quisiera conocer los requisitos y los siguientes pasos.'
+
+/**
+ * Medios de pago suministrados por el responsable.
+ * - Mercado Pago: enlace comercial público. Se abre tal cual, sin modificarlo ni agregar importes.
+ * - Transferencias: solo instrucciones. No existe verificación automática: cada pago se confirma
+ *   manualmente al revisar el ingreso en la cuenta.
+ */
+export const PAYMENTS = {
+  mercadoPagoLink: 'https://link.mercadopago.com.co/elithlexiatech8',
+  holder: 'Mauricio Escobar Pinzón / ELITH LEX GROUP',
+  transfers: [
+    { id: 'breb', label: 'Bre-B', kind: 'Llave Bre-B', value: '79396055' },
+    { id: 'nequi', label: 'Nequi / Daviplata', kind: 'Número de celular', value: '3132922973' },
+  ],
+  /**
+   * Cuota inicial para iniciar el servicio, en COP. Mantener en null hasta que el responsable
+   * la defina y apruebe: mientras sea null, el sitio no muestra ninguna cifra.
+   */
+  initialFee: null as number | null,
+} as const

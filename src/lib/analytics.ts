@@ -21,6 +21,8 @@ export type TrackEvent =
   | 'email_click' // clic en el correo
   | 'form_start' // el usuario empezó a llenar el formulario corto
   | 'calculator_complete' // obtuvo un resultado orientativo
+  | 'payment_checkout_open' // abrió el checkout de Mercado Pago (intención, NO es un pago)
+  | 'payment_detail_copy' // copió un dato de transferencia (intención, NO es un pago)
   | 'payment_confirmed' // SOLO tras confirmación verificada del servidor (pendiente)
 
 declare global {

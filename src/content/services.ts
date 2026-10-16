@@ -114,7 +114,7 @@ export const SERVICES: Service[] = [
     priceLabel: 'Cotización por WhatsApp',
     priceNote: 'La viabilidad depende de las circunstancias y los documentos disponibles.',
     description:
-      'Orientación sobre documentos, poderes, autenticaciones, apostillas o legalizaciones cuando sean exigibles, y coordinación del procedimiento que corresponda en Colombia. No todos los trámites pueden hacerse completamente en línea.',
+      'Elaboramos y te enviamos el poder y el acuerdo; te indicamos si debes firmarlos ante un consulado colombiano o ante una autoridad local, con apostilla o legalización y traducción oficial cuando correspondan. Algunas formalidades pueden requerir presencia ante esa autoridad.',
     points: ['Poderes y apostillas cuando apliquen', 'Coordinación desde el exterior', 'Viabilidad según el caso'],
     ctaLabel: 'Consultar desde el exterior',
     whatsappMessage:
@@ -137,4 +137,4 @@ export const CALCULATOR_OPTIONS: { id: string; label: string; detail: string; se
 ]
 
 export const FEES_DISCLAIMER =
-  'Los valores publicados corresponden únicamente a honorarios jurídicos. Los gastos notariales, registrales, autenticaciones, apostillas, traducciones, envíos y demás conceptos se informan y pagan por separado, según el caso y las tarifas vigentes de cada entidad.'
+  'Los valores publicados corresponden únicamente a honorarios jurídicos. Los gastos notariales, registrales, autenticaciones, apostillas, traducciones, envíos y demás conceptos se informan y pagan por separado, según el caso y las tarifas vigentes de cada entidad. Los gastos adicionales y el alcance del servicio se informan antes de contratar.'

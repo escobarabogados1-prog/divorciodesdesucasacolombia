@@ -11,7 +11,11 @@ export default function Footer() {
       <div className="container-x grid gap-10 border-t border-white/10 pt-14 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <Logo dark />
-          <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
+          <p className="mt-5 text-sm font-semibold text-white">
+            {SITE.brand} · {SITE.tagline}
+            <span className="block font-normal text-slate-400">{SITE.city}</span>
+          </p>
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-400">
             Bufete de abogados con {SITE.experience}. {SITE.coverage}
           </p>
           <p className="mt-5 text-sm">
@@ -25,6 +29,8 @@ export default function Footer() {
           <p className="text-xs font-bold tracking-[0.16em] text-slate-500 uppercase">Secciones</p>
           <ul className="mt-4 space-y-2.5 text-sm">
             {NAV.map((n) => <li key={n.href}><Link to={n.href} className="hover:text-white">{n.label}</Link></li>)}
+            <li><Link to="/#duracion" className="hover:text-white">Duración del divorcio</Link></li>
+            <li><Link to="/#pagos" className="hover:text-white">Pagar en línea</Link></li>
           </ul>
         </nav>
 
@@ -43,7 +49,7 @@ export default function Footer() {
         <p>
           La información de este sitio es general y no constituye asesoría jurídica ni cotización vinculante. Los honorarios publicados no incluyen gastos notariales, registrales, autenticaciones, apostillas ni otros conceptos. Los tiempos dependen de cada caso y de las autoridades competentes.
         </p>
-        <p className="mt-3">© {new Date().getFullYear()} {SITE.brand}. Todos los derechos reservados.</p>
+        <p className="mt-3">© {new Date().getFullYear()} {SITE.brand} · {SITE.tagline} · {SITE.city}. Todos los derechos reservados.</p>
       </div>
     </footer>
   )

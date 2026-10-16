@@ -166,7 +166,8 @@ export const LEGAL_PAGES: Record<string, LegalPage> = {
         heading: '4. Honorarios y pagos',
         paragraphs: [
           FEES_DISCLAIMER,
-          'Los pagos solo se realizan a través de los medios que el equipo confirme por escrito. Este sitio no procesa pagos mientras la integración no haya sido verificada.',
+          'Los pagos se realizan únicamente por los medios publicados en este sitio (Mercado Pago, Bre-B y Nequi/Daviplata) o por los que el equipo confirme por escrito, y solo después de que se hayan informado el servicio, el concepto y el valor. Este sitio no procesa ni almacena datos de pago: el checkout de Mercado Pago se abre en su propia plataforma y las transferencias se confirman manualmente al verificar el ingreso.',
+          'ELITH LEX GROUP nunca solicita claves bancarias, PIN, códigos de autenticación ni contraseñas.',
         ],
       },
       {

@@ -1,4 +1,4 @@
-import { Check, Info } from 'lucide-react'
+import { Check, CreditCard, Info } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { FEES_DISCLAIMER, SERVICES } from '../content/services'
 import WhatsAppLink from './WhatsAppLink'
@@ -52,6 +52,13 @@ export default function ServicesGrid() {
                   <WhatsAppIcon className="size-4" />
                   {s.ctaLabel}
                 </WhatsAppLink>
+                <Link
+                  to={`/?servicio=${s.id}#pagos`}
+                  className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full text-sm font-bold text-navy underline-offset-4 hover:underline"
+                >
+                  <CreditCard className="size-4" aria-hidden="true" />
+                  Pagar en línea
+                </Link>
               </div>
             </li>
           ))}

@@ -1,5 +1,5 @@
-import { MapPin } from 'lucide-react'
-import { PROCESS } from '../content/home'
+import { FileSignature, MapPin } from 'lucide-react'
+import { POWER_AND_AGREEMENT, PROCESS } from '../content/home'
 
 export default function ProcessSteps() {
   return (
@@ -7,10 +7,10 @@ export default function ProcessSteps() {
       <div className="container-x">
         <div className="max-w-2xl">
           <p className="eyebrow">Cómo funciona</p>
-          <h2 id="proceso-title" className="mt-3 text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">Cuatro etapas, comunicación directa</h2>
+          <h2 id="proceso-title" className="mt-3 text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">Un proceso claro, con comunicación directa</h2>
         </div>
 
-        <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {PROCESS.steps.map((step, i) => (
             <li key={step.title} className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <span className="text-5xl font-extrabold text-brand/80" aria-hidden="true">0{i + 1}</span>
@@ -23,7 +23,17 @@ export default function ProcessSteps() {
           ))}
         </ol>
 
-        <div className="mt-10 flex flex-col gap-3 rounded-2xl border border-gold/30 bg-gold/10 p-6 sm:flex-row sm:items-start">
+        <div className="mt-10 rounded-2xl border border-brand/30 bg-brand/[0.06] p-6 sm:p-8">
+          <div className="flex items-center gap-3">
+            <FileSignature className="size-6 shrink-0 text-brand" aria-hidden="true" />
+            <h3 className="text-xl font-bold">{POWER_AND_AGREEMENT.title}</h3>
+          </div>
+          <div className="mt-4 space-y-3 text-[15px] leading-relaxed text-slate-300">
+            {POWER_AND_AGREEMENT.paragraphs.map((p) => <p key={p}>{p}</p>)}
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-gold/30 bg-gold/10 p-6 sm:flex-row sm:items-start">
           <MapPin className="size-6 shrink-0 text-gold-light" aria-hidden="true" />
           <div>
             <p className="font-semibold text-white">{PROCESS.coverage}</p>
