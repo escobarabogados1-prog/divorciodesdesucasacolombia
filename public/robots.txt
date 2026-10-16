@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://divorce-services-colombia.netlify.app/sitemap.xml
+Sitemap: https://divorciodesdesucasacolombia.pages.dev/sitemap.xml

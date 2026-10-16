@@ -13,9 +13,9 @@ import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function HomePage() {
   usePageMeta({
-    title: 'Tu divorcio, sin salir de casa | Divorcio Express en Colombia · ELITH LEX GROUP',
+    title: 'Divorcio Express en Bogotá y Colombia | ELITH LEX GROUP',
     description:
-      'Abogados de divorcio en Bogotá: divorcio de mutuo acuerdo, con hijos menores, con bienes, unilateral y desde el exterior. Honorarios publicados y consulta por WhatsApp.',
+      'Abogados de divorcio en Bogotá: mutuo acuerdo, con hijos, con bienes, unilateral y desde el exterior. Honorarios claros y consulta por WhatsApp.',
     path: '/',
   })
 
