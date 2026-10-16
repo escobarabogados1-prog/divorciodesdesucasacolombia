@@ -1,0 +1,47 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Rutas de la SPA: se reescriben a index.html con estado 200.
+# Cualquier otra ruta inexistente devuelve public/404.html con estado 404 real.
+[[redirects]]
+  from = "/politica-de-datos"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/aviso-de-privacidad"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/terminos-y-condiciones"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/honorarios-y-gastos"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/prestador-del-servicio"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
