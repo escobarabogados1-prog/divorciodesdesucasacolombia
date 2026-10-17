@@ -9,7 +9,7 @@ export const PENDING = '[Pendiente de confirmar]'
 export const SITE = {
   brand: 'ELITH LEX GROUP',
   product: 'Divorcios Express en Colombia',
-  url: (import.meta.env.VITE_SITE_URL || 'https://divorciodesdesucasacolombia.pages.dev').replace(/\/$/, ''),
+  url: (import.meta.env.VITE_SITE_URL || 'https://elithlextech.online').replace(/\/$/, ''),
   experience: 'más de 15 años de experiencia',
   whatsapp: {
     number: '573167824217',
